@@ -44,14 +44,28 @@ module.exports = function makeExchange(currency) {
         return { H: HH, P: PP };
     } else if ((DD > 0) && (NN > 0)) {
         return { D: DD, N: NN };
+    } else if ((HH > 0) && (NN > 0)) {
+        return { H: HH, N: NN };
     } else if ((DD > 0) && (PP > 0)) {
         return { D: DD, P: PP };
+    } else if ((DD > 0) && (HH > 0)) {
+        return { D: DD, H: HH };
+    } else if ((DD > 0) && (QQ > 0)) {
+        return { D: DD, Q: QQ };
+    } else if ((NN > 0) && (PP > 0)) {
+        return { N: NN, P: PP };
+    } else if ((HH > 0) && (QQ > 0)) {
+        return { H: HH, Q: QQ };
+    } else if ((PP > 0) && (QQ > 0)) {
+        return { P: PP, Q: QQ };
     } else if (HH > 0) {
         return { H: HH };
     } else if (DD > 0) {
         return { D: DD };
     } else if (NN > 0) {
         return { N: NN };
+    } else if (QQ > 0) {
+        return { Q: QQ };
     } else if (PP > 0) {
         return { P: PP };
     } else if (test == 0) {
