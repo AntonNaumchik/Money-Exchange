@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello</title>
+	</head>
+
+	<body>
+		<script language="javascript" type="text/javascript">{
+	var test = 142; //currency;
+    var n50kop = test % 50; //41
+    var H = test - n50kop;  //50
+    var HH = H / 50;	// кол-во монеток номиналом 50 коп 1 pcs.
+	alert(HH);
+	var n25kop = n50kop % 25; // 16
+    var Q = n50kop - n25kop;  // 25
+    var QQ = Q / 25;	// кол-во монеток номиналом 25 коп 1 pcs.
+    alert(QQ);
+	var n10kop = n25kop % 10; // 6
+    var D = n25kop - n10kop;  // 10
+    var DD = D / 10;	// кол-во монеток номиналом 10 коп 1 pcs.
+    alert(DD);
+	var n5kop = n10kop % 5; // 1
+    var N = n10kop - n5kop; // 5
+    var NN = N / 5;	    // кол-во монеток номиналом 5 коп  1 pcs.
+    alert(NN);
+	var n1kop = n5kop / 1; // 1
+    var PP = n1kop;     // кол-во монеток номиналом 1 коп; 1 pcs.
+	alert(PP);
+	 if ((H > 0) && (Q > 0) && (D > 0) && (N > 0) && (P > 0)) {
+      //alert({"H": H, "Q": Q, "D": D, "N": N, "P": P });
+    } else if (test == 0) {
+       // return ({});
+    } else if (test > 10001) {
+        //return { error: "You are rich, my friend! We don\'t have so much coins for exchange" };
+    } else {
+        //return ({});
+    }
+}
+</script>
+	</body>
+	
+</html>
